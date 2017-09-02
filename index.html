@@ -1,13 +1,15 @@
-<style>
-input { cursor:col-resize}
-label { margin:30px auto}
-.well { margin:30px auto;}
-</style>
-<button id="test_drag"></button>
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="jqueryDrag.js"></script>
+<h2>Jquery Input Drag </h2>
 
+<input type="text" id="test_drag" />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jqueryDrag.js"></script>
 <script>
-	$('#test_drag').jqueryDrag({min:-20, max:20,direction:'right'});
+	$('#test_drag').jqueryDrag({
+		min:-20, 
+		max:20,
+		direction:'right'
+	});
 </script>
 
