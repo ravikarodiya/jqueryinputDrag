@@ -12,6 +12,13 @@
 		if($(this).val()=='NaN' || $(this).val()==''){
 			$(this).val(0);
 		}
+		if(settings.direction=='up' || settings.direction=='down'){
+			 settings.applied_on.css({'cursor': 'row-resize !important'});
+			}
+		if(settings.direction=='right' || settings.direction=='left'){
+			 settings.applied_on.css({'cursor': 'row-resize !important'});
+			}
+		
 		$(document).on('mousedown',el,function(e){
 			if(settings.direction=='up' || settings.direction=='down'){
 				mY = e.pageY;
@@ -25,6 +32,7 @@
 			 
 			pressedmoveout(isDrag,settings.min,settings.max,settings.applied_on,settings.direction);
 		});
+		
 		function pressedmoveout(isDrag,min,max,btn_fire,type){
 			$(document).on('mousemove',function(e){
 				$('body').css({'cursor': 'row-resize !important'});
